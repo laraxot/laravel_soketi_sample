@@ -14,7 +14,13 @@
     <link href="https://fonts.bunny.net/css?family=Nunito" rel="stylesheet">
 
     <!-- Scripts -->
+    {{--
     @vite(['resources/sass/app.scss', 'resources/js/app.js'])
+    --}}
+    <!-- Styles -->
+    <link rel="stylesheet" href="{{ asset('css/app.css') }}">
+    @livewireStyles
+
 </head>
 <body>
     <div id="app">
@@ -74,7 +80,14 @@
 
         <main class="py-4">
             @yield('content')
+            {!!  $slot !!}
         </main>
+
+        <!-- Scripts -->
+        <script src="{{ asset('js/manifest.js') }}"></script>
+        <script src="{{ asset('js/vendor.js') }}"></script>
+        <script src="{{ asset('js/app.js') }}"></script>
+        @livewireScripts
     </div>
 </body>
 </html>
