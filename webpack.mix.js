@@ -17,7 +17,7 @@ mix.js('resources/js/app.js', 'public/js');
     //.minify('public/js/app.js')
     //.minify('public/css/app.css')
     ;
-mix.sass('resources/sass/app.scss', 'css');
+mix.sass('resources/sass/app.scss', 'public/css');
 /*
 mix.browserSync({
     proxy: 'localhost:8000',
